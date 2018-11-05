@@ -129,8 +129,8 @@ void main() {
 #define USB_EXT_OSC_DIV_4        0x50
 
 void sysclk_init(){
-  REF0CN = 0x07;
-  
+  REF0CN = 0x18; //Use Vref pin as a GPIO pin 
+   
   // Configure internal oscillator for its maximum frequency and enable missing clock detector
   OSCICN |= 0x03;
 
